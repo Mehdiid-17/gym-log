@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
+<meta name="theme-color" content="#0b0b0f">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Gym Log">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<link rel="icon" href="icons/icon-192.png">
+<title>Gym Log</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header id="topbar">
+  <h1 id="title">Workout</h1>
+  <button id="btn-settings" class="icon-btn" aria-label="Settings">⚙︎</button>
+</header>
+
+<main id="view"></main>
+
+<div id="rest" class="rest hidden" role="timer" aria-live="off">
+  <div class="rest-left"><span class="rest-label">Rest</span><span id="rest-time">0:00</span></div>
+  <div class="rest-actions">
+    <button id="rest-minus" class="chip">−15s</button>
+    <button id="rest-plus" class="chip">+15s</button>
+    <button id="rest-skip" class="chip chip-primary">Skip</button>
+  </div>
+</div>
+
+<nav id="tabs">
+  <button data-tab="workout" class="active"><span>🏋️</span>Workout</button>
+  <button data-tab="history"><span>📅</span>History</button>
+  <button data-tab="progress"><span>📈</span>Progress</button>
+</nav>
+
+<div id="sheet" class="sheet hidden"></div>
+<div id="toast" class="toast hidden"></div>
+
+<script src="exercises.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
